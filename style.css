@@ -1,0 +1,198 @@
+body {
+  margin:0;
+  position: relative;
+  background: linear-gradient(to right, rgb(76, 209, 116,0.5), rgb(220, 45, 123,0.5)),url("cool-background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  font-family: "Georgia", sans-serif;
+}
+
+/*Header area*/
+.header {
+  margin-top: 5vh;
+  height: 25vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  color: white;
+}
+
+.header h1{
+  font-size: 3em;
+}
+
+.header p{
+  font-size: 1.5em;
+}
+
+/*Input area */
+.middleInput{
+  text-align: center;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+input { 
+  width: 20%;
+  font-size: 1em;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 1em;
+  font-family: "Georgia", sans-serif;
+}
+
+ul p {
+  margin:0;
+}
+
+#enter {
+  font-size: 0.8em;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 3px #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 2em;
+  background-color:#f6f6f6;
+  font-family: "Georgia", sans-serif;
+}
+
+#enter:hover {
+  background-color: #eee;
+  cursor:pointer;
+}
+
+/*To do lists area*/
+
+.toDoLists{
+  height: 50vh;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  list-style: none;
+  padding: 5px ;
+  width: 30%;
+  align-self: center;
+  word-wrap: normal;
+  border: 1px solid #ddd;
+  background-color: #f6f6f6;
+  padding: 12px;
+  font-size: 18px;
+  color: black;
+}
+
+li:hover {
+    background-color: #eee;
+}
+
+.close {
+  align-self: center;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 0.2em;
+  color: #f6f6f6;
+  font-family: "Georgia";
+}
+
+li:hover .close {
+  color: grey;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #d1cfcf;
+}
+
+div.checkbox {
+  align-self: center;
+}
+
+ul.checkboxes {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1em;
+}
+
+[role="checkbox"] {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.4em;
+  cursor: default;
+}
+
+[role="checkbox"]::before,
+[role="checkbox"]::after {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translate(-50%, -50%);
+  content: '';
+}
+
+[role="checkbox"]::before {
+  width: 14px;
+  height: 14px;
+  border: 1px solid hsl(0, 0%, 66%);
+  border-radius: 0.2em;
+}
+
+[role="checkbox"]:active::before {
+  background-color: #b3b1b1;
+}
+
+[role="checkbox"][aria-checked="mixed"]::before,
+[role="checkbox"][aria-checked="true"]::before {
+  background-color: #d1cfcf;
+}
+
+[role="checkbox"][aria-checked="mixed"]::after {
+  display: block;
+  width: 8px;
+  border-bottom: 0.125em solid #fff;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  transform-origin: center center;
+}
+
+[role="checkbox"][aria-checked="mixed"]:active::after,
+[role="checkbox"][aria-checked="true"]::after {
+  display: block;
+  width: 0.25em;
+  height: 0.4em;
+  border: solid #fff;
+  border-width: 0 0.125em 0.125em 0;
+  transform: translateY(-65%) translateX(-50%) rotate(45deg);
+}
+
+[role="checkbox"][aria-checked="mixed"]:active::before,
+[role="checkbox"][aria-checked="true"]:active::before {
+  background-color: #b3b1b1;
+}
+
+[role="checkbox"]:focus {
+  outline: none;
+}
